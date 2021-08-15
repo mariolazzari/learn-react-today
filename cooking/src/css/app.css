@@ -1,0 +1,17 @@
+@import-normalize;
+@import "./recipe-list.css";
+
+*,
+*::after,
+*::before {
+  font-family: Gotam Rounded, sans-serif;
+}
+
+html {
+  font-size: 25px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
