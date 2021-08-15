@@ -8,6 +8,10 @@ const sampleRecipes = [
     servings: 3,
     instrunctions:
       "1. Add chicken to the pot and cook for 30 minutes. 2. Add chicken stock and bring to a boil. 3. Add chicken pieces and cook for another 30 minutes.",
+    ingredients: [
+      { id: 1, name: "Chicken", amount: "2 punds" },
+      { id: 2, name: "Salt", amount: "2 tbl" },
+    ],
   },
   {
     id: 2,
@@ -16,6 +20,10 @@ const sampleRecipes = [
     servings: 3,
     instrunctions:
       "1. Add chicken to the pot and cook for 30 minutes. 2. Add chicken stock and bring to a boil. 3. Add chicken pieces and cook for another 30 minutes.",
+    ingredients: [
+      { id: 1, name: "Chicken", amount: "2 libs" },
+      { id: 2, name: "Salt", amount: "2 tbl" },
+    ],
   },
 ];
 
