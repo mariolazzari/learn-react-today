@@ -1,5 +1,8 @@
+import { useState } from "react";
 import RecipeList from "./RecipeList";
 import "../css/app.css";
+import { v4 as uuidv4 } from "uuid";
+import reactDom from "react-dom";
 
 const sampleRecipes = [
   {
@@ -29,10 +32,31 @@ const sampleRecipes = [
 ];
 
 function App() {
+  const [recipes, setRecipes] = useState(sampleRecipes);
+
+  const handleRecipeAdd = () => {
+    const newRecipe = {
+      id: uuidv4(),
+      name: "New",
+      servings: 1,
+      cookTime: "1:00",
+      instructions: "Intruc,",
+      ingredients: [{ id: uuidv4(), name: "Name", amount: "1 Tbs" }],
+    };
+
+    setRecipes([...recipes, newRecipe]);
+  };
+
+  const handleRecipeDelete = id => {
+    setRecipes(recipes.filter(r => r.id !== id));
+  };
+
   return (
-    <div>
-      <RecipeList recipes={sampleRecipes} />
-    </div>
+    <RecipeList
+      recipes={recipes}
+      handleRecipeAdd={handleRecipeAdd}
+      handleRecipeDelete={handleRecipeDelete}
+    />
   );
 }
 
