@@ -4,32 +4,34 @@ const Recipe = props => {
   const { name, cookingTime, servings, instructions, ingredients } = props;
 
   return (
-    <div>
-      <div>
-        <h3>{name}</h3>
+    <div className="recipe">
+      <div className="recipe-header">
+        <h3 className="recipe-title">{name}</h3>
         <div>
-          <button>Edit</button>
-          <button>Delete</button>
+          <button className="btn btn-primary mr-1">Edit</button>
+          <button className="btn btn-danger">Delete</button>
         </div>
       </div>
-      <div>
-        <span>Cook time</span>
-        <span>{cookingTime}</span>
+      <div className="recipe-row">
+        <span className="recipe-label">Cook time</span>
+        <span className="recipe-value">{cookingTime}</span>
       </div>
 
-      <div>
-        <span>Servings:</span>
-        <span>{servings}</span>
+      <div className="recipe-row">
+        <span className="recipe-label">Servings:</span>
+        <span className="recipe-value">{servings}</span>
       </div>
 
-      <div>
-        <span>Instructions:</span>
-        <div>{instructions}</div>
+      <div className="recipe-row">
+        <span className="recipe-label">Instructions:</span>
+        <div className="recipe-value recipe-value-ind recipe-instructions">
+          {instructions}
+        </div>
       </div>
 
-      <div>
-        <span>Ingredients:</span>
-        <div>
+      <div className="recipe-row">
+        <span className="recipe-label">Ingredients:</span>
+        <div className="recipe-value">
           <IngredientList ingredients={ingredients} />
         </div>
       </div>
