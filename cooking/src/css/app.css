@@ -3,11 +3,13 @@
 @import "./buttons.css";
 @import "./recipe.css";
 @import "./ingredients.css";
+@import "../css/recipe-edit.css";
 
 *,
 *::after,
 *::before {
   font-family: Gotam Rounded, sans-serif;
+  box-sizing: border-box;
 }
 
 html {
